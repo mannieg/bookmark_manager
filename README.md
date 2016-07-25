@@ -20,4 +20,4 @@
 
 - As a user
 - So that I can finds links according to my tags
-- I'd like to search links with the tags
+- I'd like to search links tawith the tags
