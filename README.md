@@ -7,29 +7,36 @@ Work in Progress, instructions to be added at a later date.
 User Stories
 ------------
 
-```sh
-As a User
-So I can store links I want to revisit
-I want to see a list of my stored bookmark links
+```
+As a time-pressed user
+So that I can quickly go to web sites I regularly visit
+I would like to see a list of links on the homepage
 ```
 
-```sh
-As a User
-So I can add new bookmark links to my list
-I want to be able to add new links
+```
+As a time-pressed user
+So that I can quickly find web sites I recently bookmarked
+I would like to see links in descending chronological order
 ```
 
-```sh
-As a User
-So I can organise my links
-I want to be able to add tags to each links
+```
+As a time-pressed user
+So that I can save a website
+I would like to add the site's address and title to my bookmark manager
 ```
 
-```sh
-As a User
-So I can search my list by my tags
-I want to be able to see my list filtered by tags
 ```
+As a time-pressed user
+So that I can organise my many links into different categories for ease of search
+I would like to add tags to the links in my bookmark manager
+```
+
+```
+As a time-pressed user
+So that I can quickly find links on a particular topic
+I would like to filter links by tag
+```
+
 
 
 ![DomModel](/image/DomModel.jpg)
