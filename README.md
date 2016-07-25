@@ -30,3 +30,6 @@ As a User
 So I can search my list by my tags
 I want to be able to see my list filtered by tags
 ```
+
+
+![DomModel](/image/DomModel.jpg)
