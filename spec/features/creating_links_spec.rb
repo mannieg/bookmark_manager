@@ -1,5 +1,3 @@
-
-
 feature 'Creating New Links' do
   scenario 'User can create new links with title and URL' do
     visit '/links/new'
