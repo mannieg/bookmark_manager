@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <ul id="links">
+      <% @links.each do |link| %>
+       <li>
+         Title: <%= link.title %>
+         Url: <%= link.url %>
+       </li>
+       <% end %>
+    </ul>
+      <a href="/links/new" id= 'new_link'>
+      <button type="button" name="new_link">New link</button>
+      </a>
+  </body>
+</html>
