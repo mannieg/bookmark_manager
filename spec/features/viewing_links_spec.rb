@@ -1,3 +1,5 @@
+
+
 feature 'showing list of links' do
   scenario 'User can see list of links' do
     Link.create(:title => "Google", :url => "www.google.com")
@@ -6,6 +8,6 @@ feature 'showing list of links' do
 
     within'ul#links' do
       expect(page).to have_content ('Google')
-    end 
+    end
   end
 end
