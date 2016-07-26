@@ -13,6 +13,9 @@ gem 'rack-test'
 gem 'sinatra'
 gem 'rerun'
 gem 'rake'
+gem 'dotenv-rails', :groups => [:development, :test]
+
+
 
 group :test do
   gem 'database_cleaner'
