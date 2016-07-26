@@ -1,5 +1,6 @@
 feature "shows list of links from database" do
   scenario "User sees list of links" do
+    Link.create(url: 'http://stackoverflow.com', title: 'StackOverFlow')
     visit '/'
     expect(page).to have_content("Link")
   end
@@ -8,5 +9,5 @@ feature "shows list of links from database" do
     fill_in "Tag name", :with => "Search Engine"
     click_button "Filter"
     expect(page).to have_content ("Showing tags: Search Engine")
-
+  end
 end
