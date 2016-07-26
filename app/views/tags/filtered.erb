@@ -4,7 +4,7 @@
       <% if link.tags.map(&:name).join == "bubbles" %>
       Title: <%= link.title %>
       URL: <%= link.url %>
-      Tags:  <%= link.tags.map(&:name) %>
+      Tags:  <%= link.tags.map(&:name).join %>
       <% end %>
     </li>
   <% end %>
