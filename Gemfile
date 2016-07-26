@@ -1,4 +1,4 @@
-#!/usr/bin/env ruby
+#!/usr/bin/env ruby 2.3.1
 
 source "https://rubygems.org"
 
