@@ -1,5 +1,5 @@
-# frozen_string_literal: true
-# A sample Gemfile
+#!/usr/bin/env
+
 source "https://rubygems.org"
 
 ruby '2.3.1'
