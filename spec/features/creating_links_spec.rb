@@ -1,4 +1,5 @@
 feature 'add links' do
+
   scenario "adds website's link and title to the bookmark manager" do
     visit '/links'
     click_link('new_link')

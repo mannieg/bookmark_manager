@@ -13,3 +13,7 @@ gem 'rack-test'
 gem 'sinatra'
 gem 'rerun'
 gem 'rake'
+
+group :test do
+  gem 'database_cleaner'
+end
