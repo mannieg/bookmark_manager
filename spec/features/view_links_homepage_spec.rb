@@ -3,13 +3,13 @@ require 'capybara/rspec'
 feature 'See list of links' do
 
   scenario 'on homepage' do
-    Link.create(url: 'http://www.google.com', title: 'Google')
+    Link.create(url: 'http://www.makersacademy.com', title: 'Makers Academy')
     visit '/links'
 
     expect(page.status_code).to eq 200
 
     within 'ul#links' do
-      expect(page).to have_content "google"
+      expect(page).to have_content "makersacademy"
     end
   end
 end
