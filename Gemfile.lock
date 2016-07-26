@@ -128,6 +128,7 @@ DEPENDENCIES
   capybara
   data_mapper
   dm-postgres-adapter
+  rack-test
   rake
   rerun
   rspec
