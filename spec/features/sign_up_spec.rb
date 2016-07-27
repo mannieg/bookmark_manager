@@ -6,6 +6,6 @@ feature 'Sign up' do
     fill_in 'Email:', with: 'Mannie'
     fill_in 'Password:', with: 'Password123'
     click_button('Signup')
-    expect(User.count).to change_by(1)
+    expect(User.count).to eq 1
   end
 end
