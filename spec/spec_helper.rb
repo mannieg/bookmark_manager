@@ -10,7 +10,7 @@ require 'rspec'
 require './app/models/link'
 require 'database_cleaner'
 
-Capybara.app = Bookmark_manager
+Capybara.app = BookmarkManager
 
 RSpec.configure do |config|
   # Everything in this block runs once before all the tests run
