@@ -4,5 +4,5 @@ class Tag
   property :id, Serial
   property :tag, String
 
-  belongs_to :link
+  has n, :links, :through => Resource
 end
