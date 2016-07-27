@@ -3,11 +3,11 @@ feature 'Adding Tags to Links' do
     visit '/links/new'
     fill_in 'title', :with => 'Makers Academy'
     fill_in 'url', :with => 'http://www.makersacademy.com'
-    fill_in 'tags', :with => 'coding'
+    fill_in 'tags', :with => 'coding, bootcamp, ruby'
     click_button 'Add Link'
 
     expect(current_path).to eq '/links'
     link = Link.first
-    expect(link.tags.map(&:name)).to include 'coding'
+    expect(link.tags.map(&:name).join(' ')).to include('coding bootcamp ruby')
   end
 end

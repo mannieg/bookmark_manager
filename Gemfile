@@ -4,6 +4,7 @@ ruby '2.3.0'
 gem 'sinatra'
 gem 'data_mapper'
 gem 'dm-postgres-adapter'
+gem 'rake'
 
 group :test, :development do
   gem 'database_cleaner'
