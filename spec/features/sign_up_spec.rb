@@ -15,6 +15,6 @@ feature 'Sign up' do
     expect(page).to have_content 'Hi Mannie! Welcome to your new Bookmark Manager account.'
   end
   scenario 'input email address is the same as database entry' do
-    expect(User.first[:email]).to eq 'mannie.com'
+    expect(User.first.email).to eq 'mannie.com'
   end
 end
