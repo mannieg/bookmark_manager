@@ -4,6 +4,8 @@ require 'sinatra/base'
 require_relative 'data_mapper_setup'
 
 class BookmarkManager < Sinatra::Base
+  enable :sessions
+
   get '/links' do
     @links = Link.all
     erb(:'/links/index')
@@ -26,6 +28,10 @@ class BookmarkManager < Sinatra::Base
    tag = Tag.first(name: params[:name])
    @links = tag ? tag.links : []
    erb :'links/index'
+ end
+
+ get '/signup' do
+   erb :signup
  end
 
   # start the server if ruby file executed directly
