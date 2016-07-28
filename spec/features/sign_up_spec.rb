@@ -8,13 +8,8 @@ feature 'Sign up' do
     expect(User.first.email).to eq "RoiRoi@gmail.com"
   end
 
-  scenario 'Validate password when they do not match' do
-    visit '/users/new'
-    fill_in 'email', with: 'RoiRoi@gmail.com'
-    fill_in 'password', with: 'orangepassword'
-    fill_in 'password_repeat', with: 'applepassword'
-    click_button('Sign_Up')
-
-    expect(User.count).to eq 0
+  scenario 'requires a matching confirmation password' do
+    expect { sign_up(password_repeat: 'wrong') }.not_to change(User, :count)
   end
+
 end
