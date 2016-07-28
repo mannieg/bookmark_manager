@@ -4,7 +4,7 @@ class User
 
   include DataMapper::Resource
 
-  attr_accessor :password_repeat
+  attr_writer :password_repeat
 
   property :id,      Serial # Serial means that it will be auto-incremented for every record
   property :email,   String
@@ -17,5 +17,8 @@ class User
     self.password_digest = BCrypt::Password.create(password)
   end
 
+  private
+
+  attr_reader :password_repeat
 
 end
