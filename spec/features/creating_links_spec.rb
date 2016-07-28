@@ -4,7 +4,7 @@ feature 'New links' do
   scenario 'adding a new link to bookmark' do
 
     # Perhaps a better solution than this:
-    sign_up
+    #sign_up
 
     visit '/links/new'
     fill_in 'url', with: 'www.bbc.co.uk'

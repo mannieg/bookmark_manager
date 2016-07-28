@@ -4,8 +4,8 @@ feature 'New multiple tags' do
   scenario 'adding multiple tags to each bookmark' do
 
     # Perhaps a better solution than this:
-    sign_up
-    
+    #sign_up
+
     visit '/links/new'
     fill_in 'url', with: 'www.bbc.co.uk'
     fill_in 'title', with: 'BBC'

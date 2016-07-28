@@ -3,9 +3,6 @@ require 'capybara/rspec'
 feature 'New tag' do
   scenario 'adding a new tag to bookmark' do
 
-    # Perhaps a better solution than this:
-    sign_up
-    
     visit '/links/new'
     fill_in 'url', with: 'www.bbc.co.uk'
     fill_in 'title', with: 'BBC'
