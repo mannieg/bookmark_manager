@@ -7,6 +7,12 @@ class BookmarkManager < Sinatra::Base
   enable :sessions
   set :session_secret, 'Bookmark Secret'
 
+  helpers do
+    def current_user
+      @current_user ||= User.get(session[:user_id])
+    end
+  end
+
   get '/links' do
     @links = Link.all
     erb(:'/links/index')
@@ -37,19 +43,12 @@ class BookmarkManager < Sinatra::Base
 
    post '/signup' do
      user = User.create(:first_name => params[:first_name],
-     :last_name => params[:last_name], 
+     :last_name => params[:last_name],
      :email => params[:email], :password => params[:password])
-     session[:user_id] = user.id
      user.save
+     session[:user_id] = user.id
      redirect '/links'
    end
-
-   helpers do
-     def current_user
-       @current_user ||= User.get(session[:user_id])
-     end
-   end
-
 
   # start the server if ruby file executed directly
   run! if app_file == $0
