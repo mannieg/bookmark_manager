@@ -18,8 +18,6 @@ class BookmarkManager < Sinatra::Base
     user = User.authenticate(params[:email], params[:password])
     if user
       session[:user_id] = user.id
-      flash.now[:sign_in] = ["Welcome, you have signed in as #{user.email}"]
-      #binding.pry
       redirect '/links'
     else
       flash.now[:errors] = ['The email or password is incorrect']
