@@ -3,6 +3,7 @@ ENV["RACK_ENV"] ||= "development"
 require 'sinatra/base'
 require_relative 'data_mapper_setup'
 require 'sinatra/flash'
+require 'pry'
 
 class BookmarkManager < Sinatra::Base
   enable :sessions
@@ -43,6 +44,7 @@ class BookmarkManager < Sinatra::Base
   post '/users/new' do
     @user = User.new(email: params[:email], password: params[:password], password_repeat: params[:password_repeat])
     if(@user.save)
+      #binding.pry
       session[:user_id] = @user.id
       redirect '/links'
     else

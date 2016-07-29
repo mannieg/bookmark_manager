@@ -5,6 +5,7 @@ GEM
     bcrypt (3.1.11)
     bcrypt-ruby (3.1.5)
       bcrypt (>= 3.1.3)
+    byebug (9.0.5)
     capybara (2.7.1)
       addressable
       mime-types (>= 1.16)
@@ -82,6 +83,9 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
+    pry-byebug (3.4.0)
+      byebug (~> 9.0)
+      pry (~> 0.10)
     rack (1.6.4)
     rack-protection (1.5.3)
       rack
@@ -129,7 +133,7 @@ DEPENDENCIES
   data_mapper
   database_cleaner
   dm-postgres-adapter
-  pry
+  pry-byebug
   rake
   rspec
   rspec-sinatra

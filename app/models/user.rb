@@ -6,7 +6,7 @@ class User
 
   attr_writer :password_repeat
 
-  property :id,      Serial # Serial means that it will be auto-incremented for every record
+  property :id,      Serial 
   property :email,   String,  :required => true
 
   property :password_digest, String, length: 60

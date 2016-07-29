@@ -6,7 +6,6 @@ require_relative 'models/tag'
 require_relative 'models/user'
 
 DataMapper.setup(:default, ENV['DATABASE_URL'] || "postgres://localhost/bookmark_manager_#{ENV['RACK_ENV']}")
-# Let's check that everything we wrote in our models was OK
+
 DataMapper.finalize
-# And let's build any new columns or tables we added
 DataMapper.auto_upgrade!
