@@ -8,11 +8,13 @@
     <% if current_user %>
       Welcome, <%= current_user.email %>
     <% end %>
-    <% if flash[:warning] %>
-     <div class="alert alert-block">
-      <%= flash[:warning] %>
-     </div>
-    <% end %>
-    <%= yield %> 
+    <% if flash[:warning] && !flash[:warning].empty? %>
+      <% flash[:warning].each do |msg| %>
+        <div class="alert alert-block">
+          <%= msg %>
+         </div>
+       <% end %>
+     <% end %>
+    <%= yield %>
   </body>
 </html>

@@ -6,13 +6,14 @@ class User
 
   attr_writer :password_repeat
 
-  property :id,      Serial 
-  property :email,   String,  :required => true
+  property :id,      Serial
+  property :email,   String,  :required => true, :unique => true
 
   property :password_digest, String, length: 60
 
   validates_format_of :email, :as => :email_address
   validates_confirmation_of :password_digest, :confirm => :password_repeat
+
 
   def password=(password)
     self.password_digest = BCrypt::Password.create(password)
