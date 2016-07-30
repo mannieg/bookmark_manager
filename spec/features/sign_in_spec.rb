@@ -1,5 +1,3 @@
-require 'capybara/rspec'
-
 feature 'Sign in' do
   scenario 'User signs in correctly' do
     User.create(email: "RoiRoi@gmail.com", password: "orangepassword",

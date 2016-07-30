@@ -8,7 +8,12 @@
     <%= flash[:sign_in] %>
     <% if current_user %>
       Welcome, <%= current_user.email %>
+      <form action="/users/logout" method="post">
+        <input name="_method" type="hidden" value="delete" />
+        <input type="submit" name="logout" value="logout">
+      </form>
     <% end %>
+    <%= flash[:notice] %>
     <% if flash[:warning] && !flash[:warning].empty? %>
       <% flash[:warning].each do |msg| %>
         <div class="alert alert-block">

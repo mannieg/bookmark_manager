@@ -6,6 +6,7 @@ require 'sinatra/flash'
 require 'pry'
 
 class BookmarkManager < Sinatra::Base
+  use Rack::MethodOverride
   enable :sessions
   set :session_secret, 'super secret'
   register Sinatra::Flash
@@ -65,6 +66,12 @@ class BookmarkManager < Sinatra::Base
       flash.now[:warning] = @user.errors.full_messages
       erb :'/users/new'
     end
+  end
+
+  delete '/users/logout' do
+    session[:user_id] = nil
+    flash.keep[:notice] = "You have succesfully logged off!"
+    redirect '/links'
   end
 
   helpers do
